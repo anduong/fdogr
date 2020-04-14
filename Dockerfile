@@ -11,6 +11,7 @@ COPY app app/
 
 RUN python app/server.py
 
+# For Heroku deployment, comment this EXPOSE because Heroku Docker does not support EXPOSE
 EXPOSE 5000
 
 CMD ["python", "app/server.py", "serve"]

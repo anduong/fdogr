@@ -67,7 +67,16 @@ async def analyze(request):
         prediction = "unknown"        
     return JSONResponse({'result': str(prediction)})
 
+# For heroku deployment, uncomment this code to get $PORT binding from Heroku
 
+# port = int(os.environ.get("PORT", 5000))
+# if __name__ == '__main__':
+#     if 'serve' in sys.argv:
+#         uvicorn.run(app=app, host='0.0.0.0', port=port, log_level="info")
+
+## End of heroku deployment
+
+# For development
 if __name__ == '__main__':
     if 'serve' in sys.argv:
         uvicorn.run(app=app, host='0.0.0.0', port=5000, log_level="info")
