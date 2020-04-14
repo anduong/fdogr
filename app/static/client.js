@@ -70,7 +70,6 @@ function sleep(ms) {
 async function showResults(results) {
   var nLoading = 0;
   while (nLoading < results.length) {
-    console.log(results[nLoading]);
     el("result-label").innerHTML = results[nLoading];
     await sleep(50 * (nLoading % 4));
     nLoading++;
