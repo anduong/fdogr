@@ -1,0 +1,63 @@
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='../static/style.css'>
+  <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+  <script src='../static/client.js'></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="../static/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon-16x16.png">
+  <link rel="manifest" href="../static/site.webmanifest">
+  <title>Dog Recognition with An</title>
+</head>
+<body>
+  <div id="container">
+    <div id="body">
+      <div class='center'>
+        <h1 class='title'>Hello! What 
+          <span class="underline">breed</span>
+          is your dog?</h1>
+        <p>
+          This dog "guru" is able to help you identify
+          <span class="underline">Corgi</span>,
+          <span class="underline">Pug</span>,
+          <span class="underline">Husky</span>, and
+          the other ones ... are not trained yet ~.~
+        </p>
+        <div class='content'>
+          <div class='no-display'>
+            <input id='file-input'
+                   class='no-display'
+                   type='file'
+                   name='file'
+                   accept='image/*'
+                   onchange='showPicked(this)'>
+          </div>
+          <button class='choose-file-button' type='button' onclick='showPicker()'>Upload your dog image</button>
+          <div class='upload-label'>
+            <label id='upload-label'>No file chosen</label>
+          </div>
+          <div>
+            <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
+          </div>
+          <div class='analyze'>
+            <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
+          </div>
+          <div class='result-label'>
+            <label id='result-label'></label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      Made with <ion-icon name="heart"></ion-icon> by An
+    </div>
+ </div>
+<div>
+  
+  
+</div>
+</body>
+</html>
